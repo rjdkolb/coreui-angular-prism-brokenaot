@@ -1,27 +1,24 @@
-# Angular2DevelopmentCLI
+# Shows how Angular AOT is broken with angular-prism
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
+> ng buildprod
+	> npm run build
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+	> coreui-angular-prism-brokenaot@1.0.0-alpha.6 build /home/richard/src/r3kdotio/core-ui-angular/Angular4_CLI_Starter
+	> ng build --prod
 
-## Code scaffolding
+	Hash: 96b348905c63b6826463                                                              
+	Time: 16655ms
+	chunk    {0} polyfills.d58d6de4c04bffbc62f3.bundle.js (polyfills) 235 kB {5} [initial] [rendered]
+	chunk    {1} scripts.69770b6a7723cf4ef8d5.bundle.js (scripts) 357 kB {5} [initial] [rendered]
+	chunk    {2} main.80b784b44783cb971f30.bundle.js (main) 1 kB {4} [initial] [rendered]
+	chunk    {3} styles.700ee8ab1d3c0ee812f2.bundle.css (styles) 69 bytes {5} [initial] [rendered]
+	chunk    {4} vendor.f8144717f139309b5d8f.bundle.js (vendor) 848 kB [initial] [rendered]
+	chunk    {5} inline.459a73ae83302fa6320f.bundle.js (inline) 0 bytes [entry] [rendered]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+	ERROR in Unexpected value 'PrismComponent in /home/richard/src/r3kdotio/core-ui-angular/Angular4_CLI_Starter/node_modules/angular-prism/dist/angular-prism.js' declared by the module 'DashboardModule in /home/richard/src/r3kdotio/core-ui-angular/Angular4_CLI_Starter/src/app/dashboard/dashboard.module.ts'. Please add a @Pipe/@Directive/@Component annotation.
 
-## Build
+	ERROR in ./src/main.ts
+	Module not found: Error: Can't resolve './$$_gendir/app/app.module.ngfactory' in '/home/richard/src/r3kdotio/core-ui-angular/Angular4_CLI_Starter/src'
+	 @ ./src/main.ts 3:0-74
+	 @ multi ./src/main.ts
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
